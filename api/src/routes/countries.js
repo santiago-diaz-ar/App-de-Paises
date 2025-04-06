@@ -1,18 +1,30 @@
 require("dotenv").config();
 const { Router } = require("express");
 const axios = require("axios");
+const serverCountry = Router();
 
-const countriesRouter = Router();
+//JSON
+const datos = require("../json/datos.json");
 
-countriesRouter.get("/countries", async (req, res) => {
+//FUNCION BD
+const finAllCountry = require("../controllers/findAllCountry");
+const createAcountry = require("../controllers/createCountry");
+
+serverCountry.get("/countries", async (req, res) => {
   try {
-    const api = await axios.get("https://restcountries.com/v3.1/all");
-
-    console.log(api);
-    return res.status(200).json(api);
+    return res.status(200).json(finAllCountry);
   } catch (error) {
     return res.status(400).json({ error: error.message });
   }
 });
 
-module.exports = countriesRouter;
+serverCountry.post("/countries", async (req, res) => {
+  try {
+    
+    return res.status(200).json("En desarrollo");
+  } catch (error) {
+    return res.status(400).json(error.message);
+  }
+});
+
+module.exports = serverCountry;
