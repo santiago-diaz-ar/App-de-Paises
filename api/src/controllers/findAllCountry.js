@@ -9,6 +9,12 @@ const finAllCountry = async (datos) => {
     for (const pais of datos) {
       const newCountry = await Country.create({
         name: pais.name?.official || "no existe",
+        Flagimage: pais?.flags?.svg || "no existe",
+        continent: pais?.continents[0] || "no existe",
+        capital: pais.capital[0] || "no existe",
+        subregion: pais.region || "no existe",
+        area: pais.area || "no existe",
+        poblacion: pais.population || "no existe",
       });
       createdCountries.push(newCountry);
     }
