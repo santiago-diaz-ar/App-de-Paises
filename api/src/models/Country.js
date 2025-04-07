@@ -8,38 +8,38 @@ module.exports = (sequelize) => {
       type: DataTypes.UUID,
       defaultValue: DataTypes.UUIDV4,
       primaryKey: true,
-      allowNull: false,
+      /* allowNull: false, */
     },
     name: {
       type: DataTypes.STRING,
-      allowNull: false,
+      /* allowNull: false, */
     },
 
     Flagimage: {
       //imagen de la bandera(Flagimage)
       type: DataTypes.STRING,
-      allowNull: false,
+      /* allowNull: false, */
     },
     continent: {
       //continente
       type: DataTypes.STRING,
-      allowNull: false,
+      /* allowNull: false, */
     },
     capital: {
       type: DataTypes.STRING,
-      allowNull: false,
+      /* allowNull: false, */
     },
     subregion: {
       type: DataTypes.STRING,
-      allowNull: false,
+      /* allowNull: false, */
     },
     area: {
       type: DataTypes.STRING,
-      allowNull: false,
+      /* allowNull: false, */
     },
     poblacion: {
       type: DataTypes.STRING,
-      allowNull: false,
+      /* allowNull: false, */
     },
   });
 };

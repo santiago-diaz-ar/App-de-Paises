@@ -1,6 +1,5 @@
 require("dotenv").config();
 const { Router } = require("express");
-const axios = require("axios");
 const serverCountry = Router();
 
 //JSON
@@ -12,7 +11,8 @@ const createAcountry = require("../controllers/createCountry");
 
 serverCountry.get("/countries", async (req, res) => {
   try {
-    return res.status(200).json(finAllCountry);
+    const findAllCountry = finAllCountry(datos);
+    return res.status(200).json(findAllCountry);
   } catch (error) {
     return res.status(400).json({ error: error.message });
   }
@@ -20,7 +20,6 @@ serverCountry.get("/countries", async (req, res) => {
 
 serverCountry.post("/countries", async (req, res) => {
   try {
-    
     return res.status(200).json("En desarrollo");
   } catch (error) {
     return res.status(400).json(error.message);
