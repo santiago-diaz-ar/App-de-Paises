@@ -3,8 +3,8 @@ const { Country } = require("../db");
 const finAllCountry = async (datos) => {
   const countriesInDB = await Country.findAll();
   if (countriesInDB.length > 0) {
-    return console.log("hola");
-    /* return countriesInDB; */
+    /* return console.log("hola"); */
+    return countriesInDB;
   } else {
     const createdCountries = [];
     for (const pais of datos) {

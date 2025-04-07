@@ -11,7 +11,7 @@ const createAcountry = require("../controllers/createCountry");
 
 serverCountry.get("/countries", async (req, res) => {
   try {
-    const findAllCountry = finAllCountry(datos);
+    const findAllCountry = await finAllCountry(datos);
     return res.status(200).json(findAllCountry);
   } catch (error) {
     return res.status(400).json({ error: error.message });
