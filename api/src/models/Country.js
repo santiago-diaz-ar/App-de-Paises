@@ -14,7 +14,6 @@ module.exports = (sequelize) => {
       type: DataTypes.STRING,
       /* allowNull: false, */
     },
-
     Flagimage: {
       //imagen de la bandera(Flagimage)
       type: DataTypes.STRING,
