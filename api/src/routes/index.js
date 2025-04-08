@@ -5,7 +5,7 @@ const cors = require("cors");
 // Importar todos los routers;
 // Ejemplo: const authRouter = require('./auth.js');
 
-const countRoutes = require("./countries");
+const RoutesCountry = require("./countries");
 
 const router = Router();
 
@@ -16,6 +16,6 @@ router.use(cors());
 // Configurar los routers
 // Ejemplo: router.use('/auth', authRouter);
 
-router.use("/", countRoutes);
+router.use("/countries", RoutesCountry);
 
 module.exports = router;
