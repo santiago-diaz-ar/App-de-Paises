@@ -21,11 +21,11 @@ module.exports = (sequelize) => {
     },
     continent: {
       //continente
-      type: DataTypes.STRING,
+      type: DataTypes.ARRAY(DataTypes.STRING),
       /* allowNull: false, */
     },
     capital: {
-      type: DataTypes.STRING,
+      type: DataTypes.ARRAY(DataTypes.STRING),
       /* allowNull: false, */
     },
     subregion: {
