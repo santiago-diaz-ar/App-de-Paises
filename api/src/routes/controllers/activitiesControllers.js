@@ -1,7 +1,12 @@
-const activities = () => {
+const activitiesAll = () => {
+  return true;
+};
+
+const activityPost = () => {
   return true;
 };
 
 module.exports = {
-  activities,
+  activitiesAll,
+  activityPost,
 };

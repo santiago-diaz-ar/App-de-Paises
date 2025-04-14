@@ -6,6 +6,7 @@ const cors = require("cors");
 // Ejemplo: const authRouter = require('./auth.js');
 
 const RoutesCountry = require("./countries");
+const RoutesActivity = require("./activities");
 
 const router = Router();
 
@@ -17,5 +18,6 @@ router.use(cors());
 // Ejemplo: router.use('/auth', authRouter);
 
 router.use("/countries", RoutesCountry);
+router.use("activities", RoutesActivity);
 
 module.exports = router;
