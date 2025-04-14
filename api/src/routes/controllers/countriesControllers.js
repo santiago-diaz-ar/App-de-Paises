@@ -23,8 +23,28 @@ const finAllCountry = async (datos) => {
 };
 
 const idCountry = async (id) => {
-  const resultSearch = [];
-  return resultSearch;
+  const dbCountries = await Country.findAll();
+  try {
+    const resultId = [];
+    for (const pais of dbCountries) {
+      if (pais.id == id) {
+        resultId.push(pais);
+      }
+    }
+    return resultId;
+  } catch (error) {
+    return error.message;
+  }
 };
 
-module.exports = { finAllCountry, idCountry };
+const nameCountry = async (name) => {
+  try {
+    console.log(name);
+
+    return name;
+  } catch (error) {
+    return error.message;
+  }
+};
+
+module.exports = { finAllCountry, idCountry, nameCountry };

@@ -9,6 +9,7 @@ const datos = require("../json/datos.json");
 const {
   finAllCountry,
   idCountry,
+  nameCountry,
 } = require("./controllers/countriesControllers");
 
 serverCountry.get("/", async (req, res) => {
@@ -30,9 +31,19 @@ serverCountry.get("/:id", async (req, res) => {
   }
 });
 
-serverCountry.get("/name", async (req, res) => {
+serverCountry.get("/", async (req, res) => {
   try {
     res.status(200).json("en desarrollo");
+  } catch (error) {
+    res.status(400).json(error.message);
+  }
+});
+
+serverCountry.get("/", async (req, res) => {
+  try {
+    const { name } = req.query;
+    const nameResultCountry = nameCountry(name);
+    res.status(200).json(nameResultCountry);
   } catch (error) {
     res.status(400).json(error.message);
   }
