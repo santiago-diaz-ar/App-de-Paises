@@ -1,9 +1,19 @@
 const { Country } = require("../../db");
 
-const finAllCountry = async (datos) => {
+const finAllCountry = async (datos, name) => {
   const countriesInDB = await Country.findAll();
+
   if (countriesInDB.length > 0) {
-    return countriesInDB;
+    if (name) {
+      for (const Country of countriesInDB) {
+        if (Country.name == name) {
+          return Country;
+        }
+      }
+    }
+    if (countriesInDB.length > 0) {
+      return countriesInDB;
+    }
   } else {
     const resultado = [];
     for (const pais of datos) {
@@ -37,14 +47,4 @@ const idCountry = async (id) => {
   }
 };
 
-const nameCountry = async (name) => {
-  try {
-    console.log(name);
-
-    return name;
-  } catch (error) {
-    return error.message;
-  }
-};
-
-module.exports = { finAllCountry, idCountry, nameCountry };
+module.exports = { finAllCountry, idCountry };
