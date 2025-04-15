@@ -7,9 +7,16 @@ const {
   activitiesAll,
 } = require("./controllers/activitiesControllers");
 
-serverActivity.post("/", (req, res) => {
+serverActivity.post("/", async (req, res) => {
   try {
-    return res.status(200).json(true);
+    const { name, dificultad, duracion, temporada } = req.body;
+    const CreacionActivity = await activityPost(
+      name,
+      dificultad,
+      duracion,
+      temporada
+    );
+    return res.status(200).json("En Desarrollo");
   } catch (error) {
     return res.status(400).json(error.message);
   }
@@ -17,7 +24,7 @@ serverActivity.post("/", (req, res) => {
 
 serverActivity.get("/", (req, res) => {
   try {
-    return res.status(200).json(true);
+    return res.status(200).json("sin iniciar");
   } catch (error) {
     return res.status(400).json(error.message);
   }

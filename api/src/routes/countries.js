@@ -5,7 +5,7 @@ const serverCountry = Router();
 //JSON
 const datos = require("../json/datos.json");
 
-//FUNCION BD
+//FUNCIONES BD
 const {
   finAllCountry,
   idCountry,

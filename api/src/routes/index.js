@@ -18,6 +18,6 @@ router.use(cors());
 // Ejemplo: router.use('/auth', authRouter);
 
 router.use("/countries", RoutesCountry);
-router.use("activities", RoutesActivity);
+router.use("/activities", RoutesActivity);
 
 module.exports = router;
