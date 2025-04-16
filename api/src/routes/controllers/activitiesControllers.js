@@ -5,8 +5,6 @@ const activitiesAll = () => {
 };
 
 const activityPost = async (name, dificultad, duracion, temporada) => {
-  console.log(name, dificultad, duracion, temporada);
-
   const Creacion = await Activity.Create({
     name: name,
     dificultad: dificultad,
@@ -14,7 +12,11 @@ const activityPost = async (name, dificultad, duracion, temporada) => {
     temporada: temporada,
   });
 
-  return true;
+  if (Creacion) {
+    return "se a creado la actividad en el pais de forma correcta";
+  } else {
+    return "no se a creado de forma correcta la actividad";
+  }
 };
 
 module.exports = {
