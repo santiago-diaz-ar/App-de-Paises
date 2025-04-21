@@ -9,14 +9,15 @@ const {
 
 serverActivity.post("/", async (req, res) => {
   try {
-    const { name, dificultad, duracion, temporada } = req.body;
+    const { name, dificultad, duracion, temporada, pais } = req.body;
     const CreacionActivity = await activityPost(
       name,
       dificultad,
       duracion,
-      temporada
+      temporada,
+      pais
     );
-    return res.status(200).json("En Desarrollo");
+    return res.status(200).json(CreacionActivity);
   } catch (error) {
     return res.status(400).json(error.message);
   }
