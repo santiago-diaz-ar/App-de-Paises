@@ -14,7 +14,7 @@ const {
 serverCountry.get("/", async (req, res) => {
   try {
     const { name } = req.query;
-    const findAllCountry = await finAllCountry(datos, name);
+    const findAllCountry = await finAllCountry({ datos, name });
     return res.status(200).json(findAllCountry);
   } catch (error) {
     return res.status(400).json({ error: error.message });

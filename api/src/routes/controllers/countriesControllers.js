@@ -1,6 +1,6 @@
 const { Country } = require("../../db");
 
-const finAllCountry = async (datos, name) => {
+const finAllCountry = async ({ datos, name }) => {
   const countriesInDB = await Country.findAll();
 
   if (countriesInDB.length > 0) {
@@ -22,9 +22,9 @@ const finAllCountry = async (datos, name) => {
         Flagimage: pais.flags?.svg,
         continent: pais?.continents,
         capital: pais?.capital,
-        subregion: pais.region,
-        area: pais.area,
-        poblacion: pais.population,
+        subregion: pais?.region,
+        area: pais?.area,
+        poblacion: pais?.population,
       });
       resultado.push(newCountry);
     }
@@ -32,7 +32,7 @@ const finAllCountry = async (datos, name) => {
   }
 };
 
-const idCountry = async (id) => {
+const idCountry = async ({ id }) => {
   const dbCountries = await Country.findAll();
   try {
     const resultId = [];
