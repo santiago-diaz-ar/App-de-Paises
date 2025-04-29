@@ -10,6 +10,7 @@ const {
 serverActivity.post("/", async (req, res) => {
   try {
     const { name, dificultad, duracion, temporada, pais } = req.body;
+
     const CreacionActivity = await activityPost(
       name,
       dificultad,
@@ -23,9 +24,10 @@ serverActivity.post("/", async (req, res) => {
   }
 });
 
-serverActivity.get("/", (req, res) => {
+serverActivity.get("/", async (req, res) => {
   try {
-    return res.status(200).json("sin iniciar");
+    const allActivities = await activitiesAll();
+    return res.status(200).json(allActivities);
   } catch (error) {
     return res.status(400).json(error.message);
   }

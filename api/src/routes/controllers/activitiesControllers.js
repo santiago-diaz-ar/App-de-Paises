@@ -1,16 +1,13 @@
 const { Activity } = require("../../db");
 
-const activitiesAll = () => {
-  return true;
+const activitiesAll = async () => {
+  const Actividades = await Activity.findAll();
+  return Actividades;
 };
 
-const activityPost = async ({
-  name,
-  dificultad,
-  duracion,
-  temporada,
-  pais,
-}) => {
+const activityPost = async (name, dificultad, duracion, temporada, pais) => {
+  console.log(name, dificultad, duracion, temporada, pais);
+
   const Creacion = await Activity.create({
     name,
     dificultad,
@@ -18,7 +15,7 @@ const activityPost = async ({
     temporada,
   });
 
-  Creacion.addCountries(pais);
+  /* Creacion.addCountries(pais); */
   return Creacion;
 };
 

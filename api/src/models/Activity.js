@@ -12,10 +12,10 @@ module.exports = (sequelize) => {
       type: DataTypes.STRING,
     },
     dificultad: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
     },
     duracion: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
     },
     temporada: {
       type: DataTypes.STRING,
