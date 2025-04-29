@@ -12,33 +12,26 @@ module.exports = (sequelize) => {
     },
     name: {
       type: DataTypes.STRING,
-      /* allowNull: false, */
     },
     Flagimage: {
       //imagen de la bandera(Flagimage)
       type: DataTypes.STRING,
-      /* allowNull: false, */
     },
     continent: {
       //continente
       type: DataTypes.ARRAY(DataTypes.STRING),
-      /* allowNull: false, */
     },
     capital: {
       type: DataTypes.ARRAY(DataTypes.STRING),
-      /* allowNull: false, */
     },
     subregion: {
       type: DataTypes.STRING,
-      /* allowNull: false, */
     },
     area: {
       type: DataTypes.STRING,
-      /* allowNull: false, */
     },
     poblacion: {
       type: DataTypes.STRING,
-      /* allowNull: false, */
     },
   });
 };

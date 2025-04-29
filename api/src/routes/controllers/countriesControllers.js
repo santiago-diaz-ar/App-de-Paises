@@ -17,11 +17,13 @@ const finAllCountry = async ({ datos, name }) => {
   } else {
     const resultado = [];
     for (const pais of datos) {
+      console.log(pais.capital);
+
       const newCountry = await Country.create({
         name: pais.name?.official,
         Flagimage: pais.flags?.svg,
         continent: pais?.continents,
-        capital: pais?.capital,
+        capital: pais?.capital ?? "Sin Capital Registrada",
         subregion: pais?.region,
         area: pais?.area,
         poblacion: pais?.population,
