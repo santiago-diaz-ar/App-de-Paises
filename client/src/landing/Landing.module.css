@@ -1,0 +1,7 @@
+.container{
+    border: 2px solid blue;
+}
+:root{
+      border: 2px solid red;
+      background-image: url("../assets/fondo\ app.jpg");
+}
