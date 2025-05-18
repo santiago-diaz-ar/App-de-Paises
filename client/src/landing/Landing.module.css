@@ -1,7 +1,26 @@
-.container{
-    border: 2px solid blue;
+:root {
+  background-image: url("../assets/fondo_app.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
-:root{
-      border: 2px solid red;
-      background-image: url("../assets/fondo\ app.jpg");
+
+.container {
+  border: 2px solid rgba(0, 0, 255, 0.479);
+  border-radius: 7px;
+  background-color: rgba(0, 0, 0, 0.797);
+  cursor: pointer;
+  display: flex; /* Convierte el div en un contenedor Flexbox */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
+}
+.titulo {
+  color: black;
+  border: 3px solid rgb(166, 0, 255);
+  border-radius: 7px;
+  background-color: rgba(0, 0, 0, 0.797);
+  color: aliceblue;
+  display: flex; /* Convierte el div en un contenedor Flexbox */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
 }

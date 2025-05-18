@@ -1,10 +1,14 @@
-import style from "./Landing.module.css"
-
+import style from "./Landing.module.css";
 
 function Landing() {
   return (
-    <div className={style.container}>Primera Pagina de Desarrollo</div>
-  )
+    <div>
+      <div className={style.titulo}>App Paises</div>
+      <hr />
+      <hr />
+      <div className={style.container}>Iniciar sesion</div>
+    </div>
+  );
 }
 
-export default Landing
+export default Landing;
