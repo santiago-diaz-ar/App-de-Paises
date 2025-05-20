@@ -1,9 +1,9 @@
-import React from 'react'
-
-function Home() {
+export default function Home() {
   return (
-    <div>Home</div>
-  )
+    <div>
+      <div>NavBar</div>
+      <div>Renderizacion de tarjetas</div>
+      <div>Fondo</div>
+    </div>
+  );
 }
-
-export default Home
