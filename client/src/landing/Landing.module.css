@@ -1,3 +1,15 @@
+.containerOne{
+  display: flex;
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
+  width:100vi;
+  height: 100vb;
+  background-image: url("../assets/fondo_app.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 .titulo {
   color: black;
   border: 3px solid rgb(166, 0, 255);
