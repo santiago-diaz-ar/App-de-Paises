@@ -1,10 +1,10 @@
-.containerOne{
+.containerOne {
   display: flex;
   justify-content: center; /* Centra el contenido horizontalmente */
   align-items: center; /* Centra el contenido verticalmente */
-  width:100vi;
+  width: 100vi;
   height: 100vb;
-  background-image: url("../assets/fondo_app.jpg");
+  /*  background-image: url("../assets/fondo_app.jpg"); */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -19,7 +19,7 @@
   display: flex; /* Convierte el div en un contenedor Flexbox */
   justify-content: center; /* Centra el contenido horizontalmente */
   align-items: center; /* Centra el contenido verticalmente */
-  padding: 0.2rem;
+  padding: 10px;
   margin: 1rem;
 }
 .container {
@@ -31,6 +31,6 @@
   display: flex; /* Convierte el div en un contenedor Flexbox */
   justify-content: center; /* Centra el contenido horizontalmente */
   align-items: center; /* Centra el contenido verticalmente */
-  padding: 0.2rem;
   margin: 1rem;
+  padding: 10px;
 }
