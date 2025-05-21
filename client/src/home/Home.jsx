@@ -22,6 +22,12 @@ export default function Home() {
         <div className={style.cajabody}>7</div>
         <div className={style.cajabody}>8</div>
       </div>
+      <div className={style.about}>
+        <div className={style.cajasAbout}>Direccion: El Arenillo</div>
+        <div className={style.cajasAbout}>Numero movil:3007476082</div>
+        <div className={style.cajasAbout}> referencia: Abai Group </div>
+        <div className={style.cajasAbout}> tienda fisicas: pais 20 </div>
+      </div>
     </div>
   );
 }
