@@ -1,36 +1,20 @@
-.containerOne {
+.containerLanding {
+  border: 2px solid red;
+  width: 100vw;
+  height: 100vh;
+  padding: 20px;
+  margin: 10px;
   display: flex;
-  justify-content: center; /* Centra el contenido horizontalmente */
-  align-items: center; /* Centra el contenido verticalmente */
-  width: 100vi;
-  height: 100vb;
-  /*  background-image: url("../assets/fondo_app.jpg"); */
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.titulo {
-  color: black;
-  border: 3px solid rgb(166, 0, 255);
-  border-radius: 7px;
-  background-color: rgba(0, 0, 0, 0.797);
-  color: aliceblue;
-  display: flex; /* Convierte el div en un contenedor Flexbox */
-  justify-content: center; /* Centra el contenido horizontalmente */
-  align-items: center; /* Centra el contenido verticalmente */
-  padding: 10px;
-  margin: 1rem;
-}
-.container {
-  border: 2px solid rgba(0, 0, 255, 0.479);
-  border-radius: 7px;
-  background-color: rgba(0, 0, 0, 0.797);
-  cursor: pointer;
-  color: aliceblue;
-  display: flex; /* Convierte el div en un contenedor Flexbox */
-  justify-content: center; /* Centra el contenido horizontalmente */
-  align-items: center; /* Centra el contenido verticalmente */
-  margin: 1rem;
-  padding: 10px;
+.cajaLanding {
+  border: 2px solid blue;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  border-radius: 5px;
 }
